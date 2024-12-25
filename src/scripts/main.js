@@ -3,7 +3,6 @@
 // write code here
 const tbody = document.querySelector('tbody');
 
-// const columns = table.rows;
 const firstRow = document.querySelector('tr');
 
 const rowCount = () => tbody.childElementCount;
@@ -27,8 +26,6 @@ const setDisabled = (addBtn, removeBtn, counter) => {
       btn.removeAttribute('disabled');
     }
   };
-  // eslint-disable-next-line
-  // console.log(element, counter);
 
   if (counter === minCount) {
     setFunc(removeBtn);
@@ -53,8 +50,6 @@ addRow.addEventListener('click', () => {
   if (rowCount() < maxCount) {
     tbody.appendChild(newRow);
   }
-
-  // tbody.appendChild(newRow);
 
   setDisabled(addRow, removeRow, rowCount());
 });
