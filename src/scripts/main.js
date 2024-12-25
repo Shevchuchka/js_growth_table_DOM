@@ -70,7 +70,7 @@ addColumn.addEventListener('click', () => {
 
 removeRow.addEventListener('click', () => {
   if (rowCount() > minCount) {
-    document.querySelector('tr').remove();
+    tbody.lastElementChild.remove();
 
     setDisabled(addRow, removeRow, rowCount());
   }
@@ -79,7 +79,7 @@ removeRow.addEventListener('click', () => {
 removeColumn.addEventListener('click', () => {
   if (columnsCount() > minCount) {
     for (const row of tbody.children) {
-      row.children[0].remove();
+      row.lastElementChild.remove();
     }
   }
 
